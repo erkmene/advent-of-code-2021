@@ -63,10 +63,14 @@ assert.deepEqual(flipBits([1, 0, 1, 1, 0]), [0, 1, 0, 0, 1]);
 assert.equal(toDecimal([1, 0, 1, 1, 0]), 22);
 assert.equal(getPowerConsumption(testData), 198);
 
+console.time("perf");
 console.log("First answer:", getPowerConsumption(data));
+console.timeEnd("perf");
 
 assert.deepEqual(filterBits(testData, getMostCommonBits), [1, 0, 1, 1, 1]);
 assert.deepEqual(filterBits(testData, getLeastCommonBits), [0, 1, 0, 1, 0]);
 assert.deepEqual(getLifeSupportRating(testData), 230);
 
+console.time("perf");
 console.log("Second answer:", getLifeSupportRating(data));
+console.timeEnd("perf");

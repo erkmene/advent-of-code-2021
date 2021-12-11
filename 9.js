@@ -15,13 +15,17 @@ const parseData = (filename) =>
 
 const getNeighbors = (map, x, y) => {
   const neighbors = [];
-  for (cy = Math.max(0, y - 1); cy <= Math.min(map.length - 1, y + 1); cy++) {
+  for (
+    let cy = Math.max(0, y - 1);
+    cy <= Math.min(map.length - 1, y + 1);
+    cy++
+  ) {
     if (cy != y) {
       neighbors.push(map[cy][x]);
     }
   }
   for (
-    cx = Math.max(0, x - 1);
+    let cx = Math.max(0, x - 1);
     cx <= Math.min(map[0].length - 1, x + 1);
     cx++
   ) {

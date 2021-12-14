@@ -1,6 +1,5 @@
 const fs = require("fs");
 const assert = require("assert");
-const { isNumber } = require("util");
 
 const parseData = (filename) => {
   let [lines, instructions] = fs
